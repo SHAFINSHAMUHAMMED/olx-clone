@@ -12,7 +12,7 @@ import { AuthContext } from '../../store/Context';
 function Header() {
   const { auth } = useContext(FirebaseContext);
   const navigate=useNavigate()
-
+console.log(auth);
  function logout(e){
   e.preventDefault()
   signOut(auth)
@@ -22,6 +22,7 @@ function Header() {
  }
 
   const {user} = useContext(AuthContext)
+  console.log(user);
   return (
     <div className="headerParentDiv">
       <div className="headerChildDiv">
